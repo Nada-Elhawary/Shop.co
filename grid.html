@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Grid</title>
+    <style>
+        .box {
+            background: rgb(163, 36, 36);
+            font-size: 2rem;
+            margin: 5px;
+            border-radius: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 150px);
+            grid-auto-rows: minmax(150px, auto);
+            gap: 5px;
+            grid-template-areas:
+                '. purple purple'
+                'test test column'
+                '. . column';
+            justify-content: center;
+        }
+
+        .box-2 {
+            grid-area: purple;
+            background-color: purple
+        }
+
+        .box-3 {
+            grid-area: test;
+            background-color: purple;
+        }
+
+        .box-4 {
+            grid-area: column;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+        <div class="box box-4"></div>
+        <div class="box box-5"></div>
+        <div class="box box-6"></div>
+    </div>
+</body>
+
+</html>
